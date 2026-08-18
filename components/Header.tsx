@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Phone, Send } from "lucide-react";
+import { MessageCircle, Phone, Send } from "lucide-react";
 import { site } from "@/lib/site";
 
 export default function Header(){
@@ -13,8 +13,10 @@ export default function Header(){
       <Link href="/plant-repairs">Plant</Link>
       <Link href="/technician-cover">Technician Cover</Link>
       <Link href="/servicing-diagnostics">Servicing & Diagnostics</Link>
+      <Link href="/our-work">Our Work</Link>
       <Link href="/about">About</Link>
       {site.phoneHref ? <a href={site.phoneHref} className="navPhone"><Phone size={16}/> Call</a> : null}
+      {site.whatsappHref ? <a href={site.whatsappHref} target="_blank" rel="noreferrer" className="navWhatsapp"><MessageCircle size={16}/> WhatsApp</a> : null}
       <Link href="/contact" className="btn navCta"><Send size={16}/> Request Support</Link>
     </nav>
   </div></header>;

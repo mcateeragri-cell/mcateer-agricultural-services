@@ -25,7 +25,8 @@ export default function Footer() {
             <Link href="/agricultural-repairs">Agricultural repairs</Link><br />
             <Link href="/plant-repairs">Plant repairs</Link><br />
             <Link href="/servicing-diagnostics">Servicing & diagnostics</Link><br />
-            <Link href="/technician-cover">Technician cover</Link>
+            <Link href="/technician-cover">Technician cover</Link><br />
+            <Link href="/our-work">Recent work</Link>
           </p>
         </div>
 

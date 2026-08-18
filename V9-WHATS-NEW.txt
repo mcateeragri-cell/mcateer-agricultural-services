@@ -1,0 +1,20 @@
+McAteer Agricultural Services Website v9
+
+- Uses only genuine McAteer Agricultural Services job photography.
+- 22 supplied photographs lightly corrected for web consistency.
+- Full /our-work page.
+- Genuine photography added to homepage and service pages.
+- Floating WhatsApp action.
+- WhatsApp link in desktop header and existing mobile quick-contact bar.
+- Successful website enquiries now offer 'Send photos on WhatsApp' with the enquiry reference pre-filled.
+- Existing AgriCore enquiry integration and date-request workflow left intact.
+
+Install:
+Extract the contents of mcateer_work over:
+C:\projects\McAteer-Website\mcateer_work
+
+Then:
+npm.cmd run build
+git add .
+git commit -m "Add genuine work gallery and WhatsApp integration"
+git push

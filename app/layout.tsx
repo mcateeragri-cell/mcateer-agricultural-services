@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileBar from "@/components/MobileBar";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -44,6 +45,6 @@ export default function RootLayout({children}:{children:React.ReactNode}){
 
   return <html lang="en-GB"><body>
     <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(businessSchema)}}/>
-    <Header/><main>{children}</main><Footer/><MobileBar/>
+    <Header/><main>{children}</main><Footer/><WhatsAppFloat/><MobileBar/>
   </body></html>;
 }

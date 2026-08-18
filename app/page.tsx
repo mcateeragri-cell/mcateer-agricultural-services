@@ -6,6 +6,8 @@ import {
   Users, ClipboardCheck
 } from "lucide-react";
 import ContactActions from "@/components/ContactActions";
+import WorkGallery from "@/components/WorkGallery";
+import { workPhotos } from "@/lib/work-photos";
 
 const services=[
  {icon:Tractor,title:"Agricultural Machinery",tag:"Farms & contractors",text:"Mobile repair and servicing for tractors, telehandlers, implements and agricultural machinery.",href:"/agricultural-repairs"},
@@ -67,6 +69,8 @@ export default function Home(){return <>
   <div className="sectionHeadingRow"><div className="sectionTitle"><div className="eyebrow">Engineering services</div><h2>One point of contact when machinery or manpower becomes the problem.</h2></div><p className="sectionIntro">From a single breakdown to several weeks of dealership technician cover, McAteer Agricultural Services is built around useful, hands-on engineering support.</p></div>
   <div className="grid3">{services.map(({icon:Icon,...s},i)=><Link className="card serviceCard" href={s.href} key={s.title}><div className="serviceTop"><span className="serviceNumber">0{i+1}</span><Icon size={29}/></div><span className="cardTag">{s.tag}</span><h3>{s.title}</h3><p>{s.text}</p><span className="more">Explore service <ArrowRight size={16}/></span></Link>)}</div>
 </div></section>
+
+<WorkGallery photos={workPhotos} limit={8} showAllLink title="Engineering work you can actually see." intro="These are genuine McAteer Agricultural Services jobs — field breakdowns, servicing, engine work, diagnostics and plant repairs."/>
 
 <section className="band technicianBand"><div className="container split techSplit">
   <div>

@@ -61,3 +61,27 @@ section{padding:92px 0}.sectionTitle{max-width:760px;margin-bottom:35px}.section
 .dateHint strong{color:#103d2e}.dateHint span{font-size:.82rem;color:#64748b}
 input[type="date"].input{min-height:48px;color-scheme:light}
 @media(max-width:700px){.bookingPanel{padding:14px}.dateHint{min-height:0}}
+
+
+/* v9 genuine work photography + WhatsApp conversion */
+.navWhatsapp{display:inline-flex!important;align-items:center;gap:6px;color:#b7d89a!important;font-weight:800}
+.navWhatsapp:hover{color:#d8efc3!important}
+.realWorkSection{background:#0a0f0c;border-top:1px solid #1c2a21;border-bottom:1px solid #1c2a21}
+.realWorkHeading{align-items:end}
+.workAllLink{display:inline-flex;margin-top:14px}
+.workGallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:255px;gap:12px;margin-top:36px}
+.workPhoto{position:relative;overflow:hidden;border:1px solid #2b3930;border-radius:10px;background:#111713;min-height:0}
+.workPhotoFeatured{grid-column:span 2;grid-row:span 2}
+.workPhoto img{object-fit:cover;transition:transform .35s ease,filter .35s ease;filter:saturate(.98) contrast(1.01)}
+.workPhoto:hover img{transform:scale(1.025)}
+.workPhoto:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 46%,rgba(3,7,5,.88) 100%);pointer-events:none}
+.workPhoto figcaption{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:16px 17px;display:flex;flex-direction:column;gap:4px}
+.workPhoto figcaption span{font-size:9px;text-transform:uppercase;letter-spacing:1.4px;font-weight:900;color:#a8cf7b}
+.workPhoto figcaption strong{font-size:15px;color:#f0f3f1}
+.whatsappFloat{position:fixed;right:22px;bottom:22px;z-index:75;display:flex;align-items:center;gap:9px;padding:13px 16px;border-radius:999px;background:#25D366;color:#07140c!important;font-weight:900;font-size:13px;box-shadow:0 12px 35px rgba(0,0,0,.38);border:1px solid rgba(255,255,255,.18)}
+.whatsappFloat:hover{transform:translateY(-1px);filter:brightness(1.04)}
+.enquirySuccess{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.successWhatsapp{display:inline-flex;align-items:center;justify-content:center;padding:10px 13px;border-radius:8px;background:#25D366;color:#07140c!important;font-size:12px;font-weight:900;text-decoration:none}
+@media(max-width:1040px){.workGallery{grid-template-columns:repeat(3,1fr)}.workPhotoFeatured{grid-column:span 2}}
+@media(max-width:860px){.navWhatsapp{display:none!important}.whatsappFloat{bottom:76px;right:14px;padding:12px}.whatsappFloat span{display:none}.workGallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:220px}.workPhotoFeatured{grid-column:span 2;grid-row:span 1}}
+@media(max-width:620px){.workGallery{gap:8px;grid-auto-rows:190px}.workPhotoFeatured{height:255px;grid-row:auto}.workPhoto figcaption{padding:12px}.workPhoto figcaption strong{font-size:13px}}
