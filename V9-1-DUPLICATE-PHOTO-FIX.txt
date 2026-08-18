@@ -1,0 +1,16 @@
+McAteer Agricultural Services Website v9.1
+
+Duplicate photo cleanup:
+- Removed repeated/near-identical mobile workshop van photos from displayed galleries.
+- Kept one strong fully-equipped van image plus one separate on-site mobile-service image.
+- Preserved unique breakdown, engine, servicing, diagnostics, agricultural, plant, harvesting and implement jobs.
+- No changes to WhatsApp, enquiry forms, dates or AgriCore integration.
+
+Extract over:
+C:\projects\McAteer-Website\mcateer_work
+
+Then:
+npm.cmd run build
+git add .
+git commit -m "Remove duplicate work gallery photos"
+git push
