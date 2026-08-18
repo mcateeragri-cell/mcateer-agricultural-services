@@ -6,7 +6,14 @@ import { site } from "@/lib/site";
 export default function Header(){
   return <header className="nav"><div className="container navin">
     <Link href="/" className="brand brandLogo" aria-label={`${site.name} home`}>
-      <Image src="/brand/mcateer-logo.png" alt="McAteer Agricultural Services" width={482} height={223} priority className="brandLogoImage"/>
+      <Image
+        src="/brand/mcateer-logo-header.png"
+        alt="McAteer Agricultural Services"
+        width={1200}
+        height={432}
+        priority
+        className="brandLogoImage"
+      />
     </Link>
     <nav className="links" aria-label="Main navigation">
       <Link href="/agricultural-repairs">Agricultural</Link>

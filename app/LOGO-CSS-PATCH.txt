@@ -1,0 +1,17 @@
+
+/* v9.2 matched brand logo */
+.brandLogo{height:66px;display:flex;align-items:center;overflow:visible}
+.brandLogoImage{display:block;width:auto;height:62px;object-fit:contain;object-position:left center}
+.footerLogo{display:block;width:min(100%,520px);height:auto;object-fit:contain;object-position:left center;margin-bottom:16px}
+@media(max-width:1100px){
+  .brandLogo{height:60px}
+  .brandLogoImage{height:55px}
+}
+@media(max-width:860px){
+  .brandLogo{height:54px}
+  .brandLogoImage{height:50px;max-width:220px}
+}
+@media(max-width:520px){
+  .brandLogoImage{height:46px;max-width:190px}
+  .footerLogo{width:min(100%,420px)}
+}

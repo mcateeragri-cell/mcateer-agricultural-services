@@ -9,10 +9,10 @@ export default function Footer() {
       <div className="container footerGrid">
         <div>
           <Image
-            src="/brand/mcateer-logo.png"
+            src="/brand/mcateer-logo-footer.png"
             alt="McAteer Agricultural Services"
-            width={482}
-            height={223}
+            width={1500}
+            height={539}
             className="footerLogo"
           />
           <p>Mobile agricultural and plant machinery repair, servicing, diagnostics and flexible technician support.</p>
