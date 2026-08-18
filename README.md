@@ -45,3 +45,6 @@ When ready, set:
 - `AGRICORE_ENQUIRY_WEBHOOK_TOKEN`
 
 The website will send the richer v4 enquiry payload, including a reference number and marketing attribution. If the webhook is absent, the website still runs independently.
+
+## Phase 2 date requests
+The public support form now captures requested attendance dates without presenting them as confirmed bookings. Breakdown requests support ASAP/today/specific-date preferences, planned work supports a preferred date and daypart, and technician-cover enquiries support start/end dates plus expected shift hours. These are sent through the existing `dates` field to AgriCore.

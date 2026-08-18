@@ -50,3 +50,14 @@ section{padding:92px 0}.sectionTitle{max-width:760px;margin-bottom:35px}.section
 
 /* v7 contact details */
 .footerContacts{display:flex;flex-direction:column;gap:8px;margin-top:12px}.footerContacts a{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13px;line-height:1.35}.footerContacts a:hover{color:#a8cf7b}.footerContacts svg{flex:0 0 auto;color:#8fbd60}
+
+/* Phase 2 booking/date request controls */
+.bookingPanel{margin-top:16px;border:1px solid rgba(16,61,46,.16);border-radius:18px;background:#f7faf8;padding:16px}
+.bookingPanelTitle{display:flex;align-items:flex-start;gap:10px;margin-bottom:14px;color:#103d2e}
+.bookingPanelTitle>div{display:flex;flex-direction:column;gap:2px}
+.bookingPanelTitle strong{font-size:.96rem}
+.bookingPanelTitle span{font-size:.82rem;color:#64748b;font-weight:500}
+.dateHint{min-height:72px;border:1px dashed #cbd5e1;border-radius:12px;background:#fff;padding:12px 14px;display:flex;flex-direction:column;justify-content:center;gap:3px}
+.dateHint strong{color:#103d2e}.dateHint span{font-size:.82rem;color:#64748b}
+input[type="date"].input{min-height:48px;color-scheme:light}
+@media(max-width:700px){.bookingPanel{padding:14px}.dateHint{min-height:0}}
