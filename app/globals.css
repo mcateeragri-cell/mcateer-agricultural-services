@@ -101,3 +101,57 @@ input[type="date"].input{min-height:48px;color-scheme:light}
   .brandLogoImage{height:46px;max-width:190px}
   .footerLogo{width:min(100%,420px)}
 }
+/* v9.3 - tidy single-line desktop navigation */
+@media (min-width: 1050px) {
+  .navin {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+  }
+
+  .brandLogo {
+    flex: 0 0 auto;
+  }
+
+  .brandLogoImage {
+    width: auto;
+    height: 58px;
+    max-width: 250px;
+  }
+
+  .links {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 21px;
+  }
+
+  .links > a {
+    white-space: nowrap;
+    line-height: 1;
+    font-size: 14px;
+  }
+
+  .navPhone,
+  .navWhatsapp {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .navCta {
+    flex: 0 0 auto;
+    padding: 15px 21px;
+    white-space: nowrap;
+  }
+}
+
+/* Give wider screens a little more breathing room */
+@media (min-width: 1250px) {
+  .links {
+    gap: 25px;
+  }
+}
