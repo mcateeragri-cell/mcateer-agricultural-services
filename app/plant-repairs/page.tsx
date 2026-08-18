@@ -1,0 +1,4 @@
+import type { Metadata } from "next";
+import ServicePage from "@/components/ServicePage";
+export const metadata: Metadata = { title: "Plant Machinery Repairs", description: "Mobile plant machinery repair, servicing, hydraulic diagnostics and breakdown support for plant operators, hire companies and fleets." };
+export default function Page(){return <ServicePage eyebrow="Plant engineering" title="Plant machinery repair & maintenance support." intro="Mobile mechanical and diagnostic support for plant operators, construction businesses, hire companies and machinery fleets." items={["Excavator and loader repairs","Telehandler repairs and servicing","Hydraulic fault finding","Electrical and starting/charging faults","Planned fleet servicing","On-site breakdown support"]} asideTitle="Keep plant earning" asideText="Downtime is expensive. Service is focused on practical fault finding, clear communication and getting machines safely back into productive use."/>}
