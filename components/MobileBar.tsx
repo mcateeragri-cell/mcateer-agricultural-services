@@ -5,9 +5,23 @@ import { site } from "@/lib/site";
 export default function MobileBar() {
   return (
     <div className="mobileBar" aria-label="Quick contact">
-      {site.phoneHref ? <a href={site.phoneHref}><Phone size={17}/><span>Call</span></a> : null}
-      {site.whatsappHref ? <a href={site.whatsappHref} target="_blank" rel="noreferrer"><MessageCircle size={17}/><span>WhatsApp</span></a> : null}
-      <Link href="/contact"><Send size={17}/><span>Request support</span></Link>
+      <a href={site.phoneHref} aria-label={`Call ${site.phoneName}`}>
+        <Phone size={17}/>
+        <span>Call</span>
+      </a>
+      <a
+        href={site.whatsappHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`WhatsApp ${site.phoneName}`}
+      >
+        <MessageCircle size={17}/>
+        <span>WhatsApp</span>
+      </a>
+      <Link href="/contact">
+        <Send size={17}/>
+        <span>Request support</span>
+      </Link>
     </div>
   );
 }

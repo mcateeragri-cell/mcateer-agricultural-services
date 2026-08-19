@@ -155,3 +155,26 @@ input[type="date"].input{min-height:48px;color-scheme:light}
     gap: 25px;
   }
 }
+
+/* v9.4 direct public contact links */
+.directContactBlock{
+  display:grid;
+  gap:8px;
+  margin:20px 0;
+  padding:16px;
+  border:1px solid #2b3930;
+  border-radius:10px;
+  background:#0b1310;
+}
+.directContactBlock>strong{
+  margin-bottom:2px;
+  color:#f0f3f1;
+}
+.directContactBlock a{
+  color:#b7d89a;
+  text-decoration:none;
+  font-weight:700;
+}
+.directContactBlock a:hover{
+  text-decoration:underline;
+}

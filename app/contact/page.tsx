@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Building2, CalendarClock, MapPinned, Tractor, Wrench } from "lucide-react";
-import { site } from "@/lib/site";
+import { jamesWhatsApp, site } from "@/lib/site";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -114,7 +114,7 @@ export default function Contact(){
         <label><span className="label">Job / cover details *</span><textarea className="textarea" name="message" required placeholder={isTechnician ? "Expected workload, workshop or field-service requirement, machinery type and anything else useful." : "Symptoms, fault codes, what happened before the fault and any checks already carried out."}/></label>
         <div className="row2"><label><span className="label">Preferred contact</span><select className="select" name="preferredContact" defaultValue="Phone call"><option>Phone call</option><option>WhatsApp</option><option>Email</option><option>No preference</option></select></label><div className="formSubmitNote">Submitting an enquiry does not confirm attendance or technician availability. We will respond to agree the next step.</div></div>
         <button className="btn" type="submit" disabled={status==="sending"}>{status==="sending" ? "Sending…" : "Send support request"}</button>
-        {status==="sent"&&<div className="success enquirySuccess"><div><strong>Enquiry received.</strong>{reference ? <span> Reference: {reference}</span> : null}<br/>We will use the contact details supplied to respond.</div><a className="successWhatsapp" target="_blank" rel="noreferrer" href={`${site.whatsappHref}?text=${encodeURIComponent(`Hi McAteer Agricultural Services, I’ve just submitted enquiry ${reference || ""} and would like to send photos or more information.`)}`}>Send photos on WhatsApp</a></div>}
+        {status==="sent"&&<div className="success enquirySuccess"><div><strong>Enquiry received.</strong>{reference ? <span> Reference: {reference}</span> : null}<br/>We will use the contact details supplied to respond.</div><a className="successWhatsapp" target="_blank" rel="noopener noreferrer" href={jamesWhatsApp(`Hi McAteer Agricultural Services, I’ve just submitted enquiry ${reference || ""} and would like to send photos or more information.`)}>Send photos on WhatsApp</a></div>}
         {status==="error"&&<p className="error">{error}</p>}
         <p className="notice">By submitting this form you agree that McAteer Agricultural Services Ltd may use these details to respond to your enquiry. See the Privacy Policy for more information.</p>
       </form>
@@ -125,6 +125,14 @@ export default function Contact(){
           <div><span><CalendarClock size={13}/> Technician cover</span><strong>Dates • location • brands • type of work</strong></div>
           <div><span><Building2 size={13}/> Commercial work</span><strong>Company • contact • scope • expected duration</strong></div>
           <div><span><MapPinned size={13}/> Coverage</span><strong>{site.serviceArea}</strong></div>
+        </div>
+        <div className="directContactBlock">
+          <strong>Direct contact</strong>
+          <a href={site.phoneHref}>Call {site.phoneName} — {site.phoneDisplay}</a>
+          <a href={site.whatsappHref} target="_blank" rel="noopener noreferrer">WhatsApp {site.phoneName}</a>
+          <a href={site.secondaryPhoneHref}>Call {site.secondaryPhoneName} — {site.secondaryPhoneDisplay}</a>
+          <a href={site.secondaryWhatsappHref} target="_blank" rel="noopener noreferrer">WhatsApp {site.secondaryPhoneName}</a>
+          <a href={`mailto:${site.email}`}>{site.email}</a>
         </div>
         <p><strong>Website:</strong> {site.domain}</p>
       </div>
